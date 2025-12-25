@@ -100,7 +100,7 @@ services:
       - rabbitmq
     ports:
       - "${PORT:-3002}:${INTERNAL_PORT:-3002}"
-    command: command: /bin/sh -c "sleep 5 && node dist/src/harness.js --start-docker"
+    command: /bin/sh -c "sleep 5 && node dist/src/harness.js --start-docker"
     # Resource limits for Docker Compose (not Swarm)
     # Increase if you have more CPU cores/RAM available
     cpus: 4.0
